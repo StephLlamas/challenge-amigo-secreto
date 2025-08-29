@@ -4,7 +4,7 @@
 let amigos = [];
 
 function limpiarTexto() {
-    document.querySelector('#amigo').value = '';
+    document.getElementById('amigo').value = '';
 }
 
 function limpiarElemento(elemento, texto) {
@@ -56,9 +56,9 @@ function mostrarAmigos() {
 
 function sortearAmigo() {
     /*Validar que haya amigos disponibles*/
-    if (amigos.length > 0) {
+    if (amigos.length >= 2) {
         /*Generar un índice aleatorio: */
-        let indiceAleatorio = Math.floor(Math.random() * amigos.length) + 1;
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
         console.log(indiceAleatorio);
 
         /*Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.*/
